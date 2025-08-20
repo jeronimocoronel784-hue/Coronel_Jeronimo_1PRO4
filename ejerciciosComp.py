@@ -1,3 +1,6 @@
+print("RESOLUCION DE EJERCICIOS COMPLEMENTARIOS DE SECUENCIALES")
+print("\n")
+
 print("EJERCICIO 1: \n")
 numero1 = int(input("Ingrese un numero entero: "))
 print("\n")
