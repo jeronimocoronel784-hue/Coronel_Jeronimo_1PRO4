@@ -13,6 +13,7 @@ print("\n")
 
 print("EJERCICIO 3: \n")
 suma = numero1+numero2
+print(f"La suma de los dos numero es: {suma}")
 print("\n")
 print("\n")
 
@@ -20,12 +21,11 @@ print("\n")
 print("EJERCICIO 4: \n")
 resta = numero1-numero2
 multiplicacion = numero1*numero2
-division = numero1/numero2
-
+div = numero1/numero2
 print(f"La suma de los dos numeros es: {suma}")
 print(f"La restas de los dos numeros es: {resta}")
 print(f"La multiplicacion de los dos numeros es: {multiplicacion}")
-print(f"La division de los dos numeros es: {division}")
+print(f"La division de los dos numeros es: {div}")
 print("\n")
 print("\n")
 
@@ -40,7 +40,7 @@ print("\n")
 print("\n")
 
 print("EJERCICIO 7: \n")
-print("Por ejemplo, si le quiere aplicar un 25 porciento de descuento, el valor a ingresar seria 0,25 \n")
+print("Por ejemplo, si le quiere aplicar un 25 porciento de descuento, el valor a ingresar seria 0.25 \n")
 descuento = float(input("Ingrese el valor de descuento que le quiere aplicar al producto: "))
 print("\n")
 print("\n")
@@ -73,7 +73,7 @@ print("EJERCICIO 12: \n")
 nombre = str(input("Ingrese su nombre: "))
 apellido = str(input("Ingrese su apellido: "))
 nombre_completo = nombre + " " + apellido
-print(f"Su nombre compleot es: {nombre_completo}")
+print(f"Su nombre completo es: {nombre_completo}")
 print("\n")
 print("\n")
 
