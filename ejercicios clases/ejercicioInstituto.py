@@ -1,4 +1,5 @@
-fecha = input("Ingrese la fecha actual con el siguiente formato 'dia,DD/MM,' ")
+fecha = input("Ingrese la fecha actual con el siguiente formato 'dia,DD/MM,' \n ")
+
 try:
     dia_semana, fecha_num = fecha.split(",")
     dia_semana = dia_semana.strip().lower()
