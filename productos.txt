@@ -1,0 +1,3 @@
+Lapicera,120.5
+Cuaderno,450.0
+Regla,90.0
