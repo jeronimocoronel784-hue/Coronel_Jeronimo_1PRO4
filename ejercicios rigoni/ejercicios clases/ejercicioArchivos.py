@@ -1,7 +1,6 @@
 import csv
 import os
 
-# Nombre del archivo CSV
 ARCHIVO = "productos.csv"
 
 # -------------------- Funciones --------------------
@@ -42,12 +41,22 @@ def mostrar_productos():
     print(f"\nTotal de precios: ${total:.2f}\n")
 
 def agregar_producto():
-    """Agrega un nuevo producto validando el precio."""
+    """Agrega un nuevo producto validando nombre único y precio positivo."""
     nombre = input("Ingrese el nombre del producto: ").strip()
     if not nombre:
         print("El nombre no puede estar vacío.")
         return
 
+    # Leer productos existentes
+    productos = leer_productos()
+
+    # Validar que no exista otro producto con el mismo nombre (sin distinguir mayúsculas/minúsculas)
+    for p in productos:
+        if p["nombre"].lower() == nombre.lower():
+            print("Ya existe un producto con ese nombre. No se puede agregar duplicado.\n")
+            return
+
+    # Validar precio numérico y positivo
     try:
         precio = float(input("Ingrese el precio: "))
         if precio <= 0:
@@ -56,6 +65,7 @@ def agregar_producto():
         print("El precio debe ser un número positivo.")
         return
 
+    # Si pasa las validaciones, agregar el producto
     with open(ARCHIVO, "a", newline="", encoding="utf-8") as f:
         escritor = csv.DictWriter(f, fieldnames=["nombre", "precio"])
         escritor.writerow({"nombre": nombre, "precio": precio})
@@ -149,3 +159,4 @@ def menu():
 # -------------------- Ejecución --------------------
 if __name__ == "__main__":
     menu()
+
